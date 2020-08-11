@@ -4,10 +4,11 @@ import Person from './person';
 class Worker extends Person {
   constructor(name, age) {
     super(name, age);
+    this.state = {};
   }
 
   introduce() {
-    return `${super.basic_introduce()} I am a Worker. I have a job.`;
+    return `${super.basicIntroduce()} I am a Worker. I have a job.`;
   }
 }
 

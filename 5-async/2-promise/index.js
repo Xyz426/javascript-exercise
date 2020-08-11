@@ -5,10 +5,10 @@ function fetchData(url) {
     // TODO 22: 通过Promise实现异步请求
     xhr.open('GET', url, true);
     xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        resolve(xhr);
+      if (xhr.status === 200) {
+        resolve(xhr.responseText);
       } else {
-        reject(xhr);
+        reject(xhr.responseText);
       }
     };
     xhr.send();
@@ -19,7 +19,7 @@ function fetchData(url) {
 const URL = 'http://localhost:3000/api';
 fetchData(URL)
   .then(result => {
-    document.writeln(JSON.parse(result).name);
+    document.writeln(result.name);
   })
   .catch(error => {
     console.error(error);

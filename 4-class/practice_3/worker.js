@@ -4,6 +4,7 @@ import Person from './person';
 class Worker extends Person {
   constructor(name, age) {
     super(name, age);
+    this.state = {};
   }
 
   introduce() {

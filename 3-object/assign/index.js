@@ -3,7 +3,7 @@ export default function addSerialNumber(source) {
   const moreSource = {
     serialNumber: '12345',
     properties: {
-      color: 'green', // 为什么必须加上这个？
+      color: 'green', // 因为properties是一个整体，assign方法会把后面的properties直接覆盖
       status: 'processed'
     }
   };
